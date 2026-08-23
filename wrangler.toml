@@ -2,7 +2,7 @@
 # 作用：让 Cloudflare 的 Git 集成能识别「明文源吗」作为 Worker 入口
 # 注意：KV 绑定（变量 C）和环境变量 u 部署后在 Cloudflare Dashboard 手动配置，见下方说明
 
-name = "cfnew"
+name = "cfniu"
 main = "明文源吗"
 compatibility_date = "2026-01-20"
 
