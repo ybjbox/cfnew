@@ -1,0 +1,12 @@
+# CFnew - Cloudflare Workers 自动部署配置
+# 作用：让 Cloudflare 的 Git 集成能识别「明文源吗」作为 Worker 入口
+# 注意：KV 绑定（变量 C）和环境变量 u 部署后在 Cloudflare Dashboard 手动配置，见下方说明
+
+name = "cfnew"
+main = "明文源吗"
+compatibility_date = "2026-01-20"
+
+# ─── 部署后需要在 Cloudflare Dashboard 手动完成（Git 集成会新建一个 Worker，绑定不会自动迁移）───
+# 1. 设置 → 变量 → KV 命名空间绑定：选择你已有的 KV 命名空间，变量名必须为 C
+# 2. 设置 → 变量 → 环境变量：添加 u = 你的 UUID（必填）
+# 3. 可选变量：p（ProxyIP）、s（出站代理）、d（自定义路径）、wk（地区代码）
